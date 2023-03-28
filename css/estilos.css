@@ -1,0 +1,47 @@
+body{ min-width: 360px;}
+
+.wrapper{ min-height: 100vh;}
+
+/* SELETOR PARA PRAGRAFOS DA CLASSE 3L*/
+p.truncar-3l{
+    display: -webkit-box;  /* webkit-box é um display ue permite esse tipo de truncamento */
+    -webkit-line-clamp: 3; /* indica que esse truncamento será de 3 linhas */
+    -webkit-box-orient: vertical; /* a orientação será na vertical */
+    overflow: hidden; /* o exedente ficará escondido */
+    text-overflow: ellipsis; 
+}
+
+@media screen and (max-width: 469px) {
+    .mt-xs-3{
+        margin-top: 1rem;
+    }
+}
+
+label:hover .text-dark{
+    transition: color 0.2s ease;
+    color: white  !important;
+}
+
+label .text-dark{
+    transition: color 0.2s ease;
+}
+
+.btn-check:checked+.btn-outline-danger .text-dark,
+.btn-check:active+.btn-outline-danger .text-dark,
+.btn-check:hover+.btn-outline-danger .text-dark{
+    transition: color 0.2s ease;
+    color: white  !important;   
+}
+
+.flex-even{
+    flex: 1;  /* VAI MANTER A MESMA LARGURA ENTRE OS 3 ELEMENTOS */
+    min-width: 300px;
+}
+
+
+/* NÃO FUNCIONOU */
+.accordion.button:not(.collapsed){
+    color: white;
+    background-color: #dc3545;
+}
+
